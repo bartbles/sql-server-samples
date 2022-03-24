@@ -7,7 +7,7 @@ trigger:
 # De *pool* geeft aan van wat voor VM-image gebruik gemaakt moet worden om deze pipeline uit te kunnen voeren. 
 pool:
   name: Azure Pipelines
-  vmImage: windows-2023
+  vmImage: windows-latest
 
 variables:
   BuildConfiguration: 'Release'
@@ -18,7 +18,7 @@ steps:
 - task: VSBuild@1
   displayName: 'Build Data Warehouse'
   inputs:
-    solution: 'samples/databases/wide-world-importers/wwi-dw-ssdt/WideWorldImportersDW.sln'
+    solution: 'samples/databases/wide-world-importers/wwi-dw-ssdt/WideWorldImportersDW2.sln'
     configuration: '$(BuildConfiguration)'
 
 - task: CopyFiles@2
