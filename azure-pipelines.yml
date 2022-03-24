@@ -7,7 +7,7 @@ trigger:
 # De *pool* geeft aan van wat voor VM-image gebruik gemaakt moet worden om deze pipeline uit te kunnen voeren. 
 pool:
   name: Azure Pipelines
-  vmImage: windows-latest
+  vmImage: windows-2023
 
 variables:
   BuildConfiguration: 'Release'
